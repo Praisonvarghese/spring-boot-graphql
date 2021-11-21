@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 @Component
-public class EmployeeDataFetcher implements DataFetcher<Optional<Employee>> {
+public class EmployeeDataFetcher implements DataFetcher<Employee> {
     @Autowired
     EmployeeRespository  employeeRespository;
 
     @Override
-    public Optional<Employee> get(DataFetchingEnvironment dataFetchingEnvironment) {
-        return employeeRespository.findById(dataFetchingEnvironment.getArgument("id"));
+    public Employee get(DataFetchingEnvironment dataFetchingEnvironment) {
+        return employeeRespository.findByName(dataFetchingEnvironment.getArgument("id")).get();
     }
 }

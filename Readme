@@ -1,0 +1,51 @@
+Inset Query: http://localhost:8080/api/addEmployee
+[
+    {
+        "id": 1,
+        "name": "Philip",
+        "dept": "IT",
+        "address": [
+            "Address1",
+            "Address2"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Thomas",
+        "dept": "Finance",
+        "address": [
+            "Address12",
+            "Address12"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "James",
+        "dept": "Admin",
+        "address": [
+            "Address123",
+            "Address123"
+        ]
+    }
+]
+
+http://localhost:8080/graphql/getEmployees
+{
+    allEmployees{
+        empid
+        name
+        dept
+        address
+    }
+}
+
+http://localhost:8080/graphql/getEmployees
+
+{
+    employee(id : "Your Name"){
+        id
+        name
+        address
+        dept
+    }
+}

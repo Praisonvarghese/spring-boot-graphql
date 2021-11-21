@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class Employee {
     @Id
-    private String id;
+    private int id;
     private String name;
     private String dept;
     private String[] address;

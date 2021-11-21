@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface EmployeeRespository extends CrudRepository<Employee,String> {
+public interface EmployeeRespository extends CrudRepository<Employee,Integer> {
 
     Optional<Employee> findByName(String name);
 }

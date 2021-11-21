@@ -4,7 +4,7 @@ query: Query
 
 type Query{
     allEmployees :[Employee]
-    employee(id: String) :Employee
+    employee(id: String) : Employee
 }
 
 type Employee{
