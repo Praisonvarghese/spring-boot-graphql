@@ -40,4 +40,11 @@ public class EmployeeController {
         return new ResponseEntity<Object>(execute,HttpStatus.OK);
     }
 
+    @GetMapping("/api")
+    public ResponseEntity<Object> getGraphqlQLemployees(){
+        String greeting = "Welcome to GraphQL API";
+        return new ResponseEntity<Object>(greeting,HttpStatus.OK);
+    }
+
+
 }
